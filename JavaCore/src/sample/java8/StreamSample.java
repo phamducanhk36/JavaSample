@@ -17,7 +17,17 @@ public class StreamSample {
         List<String> filter = list.stream().filter(i -> i % 2 == 0).map(Object::toString).collect(Collectors.toList());
         System.out.println("stream -> filter -> collect: " + filter);
 
+        String SSS = "";
+        String[] split = SSS.split("");
+        String[] a = {""};
+        List<String> aa = Arrays.asList("a","b");
+        aa.contains("a");
 
-
+        List<String> collect = Arrays.stream(split)
+                .map(String::toLowerCase)
+                .filter(aa::contains).collect(Collectors.toList());
+        Stream<String> stringStream = list.stream().filter(i -> i % 2 == 0).map(Object::toString);
+        Stream<Integer> integerStream = list.stream().filter(i -> i % 2 == 0);
+        Stream<Integer> stream = list.stream();
     }
 }
