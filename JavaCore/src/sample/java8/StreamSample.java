@@ -3,6 +3,7 @@ package sample.java8;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.TreeMap;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -28,6 +29,12 @@ public class StreamSample {
                 .filter(aa::contains).collect(Collectors.toList());
         Stream<String> stringStream = list.stream().filter(i -> i % 2 == 0).map(Object::toString);
         Stream<Integer> integerStream = list.stream().filter(i -> i % 2 == 0);
-        Stream<Integer> stream = list.stream();
+        Stream<Integer> stream = list.stream().forEach();
+
+        TreeMap<Integer, Integer> map = new TreeMap<>();
+        map.put(1, null);
+        map.put(4, 3);
+        map.put(2, 1);
+        map.put(3, 1);
     }
 }

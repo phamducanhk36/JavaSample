@@ -27,6 +27,7 @@ public class EvenOddPrinter {
             while (i < 20) {
                 while (i % 2 == 1) {
                     try {
+                        Thread.sleep(2000);
                         wait();
                     } catch (
                             InterruptedException e) {
